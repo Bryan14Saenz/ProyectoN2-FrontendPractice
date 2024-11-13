@@ -1,0 +1,602 @@
+/* Estilos Generales */
+* {
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: #ffffff #005eff;
+}
+
+body {
+  font-family: 'Times New Roman', Times, serif;
+}
+
+/* Header */
+#header {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 60px;
+  background: #002930;
+  border-bottom: 1px solid #f8f0af;
+}
+
+#header .nav {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+#header .nav img {
+  width: 60px;
+}
+
+#header .nav nav ul {
+  display: flex;
+  gap: 20px;
+  margin: 20px;
+}
+
+#header .nav nav ul li a {
+  font-size: 1.2rem;
+  color: #f8f0af;
+}
+
+#header .nav nav ul li a:hover {
+  text-decoration: underline;
+}
+
+#header .nav nav ul li .norte {
+  display: grid;
+  display: none;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  justify-items: center;
+  position: absolute;
+  top: 60px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #ac4a00;
+  box-shadow: 0px 0px 10px #000000;
+}
+
+#header .nav nav ul li .norte div img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+#header .nav nav ul li .norte div ul {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 20px;
+}
+
+#header .nav nav ul li .norte div ul li {
+  text-align: center;
+  width: 200px;
+  margin: 5px;
+  padding: 5px;
+  font-size: 1.2rem;
+  border: 1px solid transparent;
+  color: #f8f0af;
+}
+
+#header .nav nav ul li:first-child:hover .norte {
+  display: grid;
+  animation: aparecer 1s forwards;
+}
+
+#header .nav nav ul li .sur {
+  display: grid;
+  display: none;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  justify-items: center;
+  position: absolute;
+  top: 60px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #f8f0af;
+  box-shadow: 0px 0px 10px #000000;
+}
+
+#header .nav nav ul li .sur div img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+#header .nav nav ul li .sur div ul {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 20px;
+}
+
+#header .nav nav ul li .sur div ul li {
+  text-align: center;
+  width: 200px;
+  margin: 5px;
+  padding: 5px;
+  font-size: 1.2rem;
+  border: 1px solid transparent;
+  color: #5b1023;
+}
+
+#header .nav nav ul li:last-child:hover .sur {
+  display: grid;
+  animation: aparecer 1s forwards;
+}
+
+#header .contacto a {
+  padding: 0px 20px;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  color: #f8f0af;
+}
+
+#header .contacto a:hover {
+  text-decoration: underline;
+}
+
+/* Main */
+#main {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px #00000039;
+  margin: 20px;
+  padding: 20px;
+}
+
+#main .busqueda {
+  padding: 10px;
+  margin: 20px;
+}
+
+#main .busqueda h2 {
+  margin: 10px;
+  font-size: 1.5rem;
+  color: #002930;
+}
+
+#main .busqueda input {
+  outline: none;
+  width: 75%;
+  margin: 10px;
+  padding: 5px;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  color: #5b1023;
+  border: 1px solid #5b102359;
+}
+
+#main .busqueda input:focus {
+  border: 1px solid #000000;
+}
+
+#main .busqueda div {
+  margin: 10px;
+  padding: 10px;
+  font-size: 1.2rem;
+}
+
+#main .busqueda div ul {
+  margin: 20px;
+  padding: 20px;
+}
+
+#main .busqueda div ul li {
+  margin: 10px;
+  padding: 10px;
+}
+
+#main .busqueda div ul li a {
+  color: #5b1023;
+}
+
+#main .busqueda div ul li a:hover {
+  text-decoration: underline;
+}
+
+#main .busqueda div:last-child {
+  text-align: center;
+  margin: 10px;
+  padding: 10px;
+  font-size: 1.2rem;
+  border-radius: 10px;
+  color: #f8f0af;
+  background-color: #002930;
+}
+
+#main .busqueda div h2 {
+  margin: 10px;
+  padding: 10px;
+  color: #f8f0af;
+}
+
+#main .busqueda div p {
+  margin: 10px;
+  padding: 10px;
+  color: #f8f0af;
+}
+
+#main .busqueda div button {
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  color: #f8f0af;
+  background-color: #002930;
+}
+
+#main .busqueda div button:hover {
+  cursor: pointer;
+}
+
+#main .lugares {
+  display: grid;
+  grid-area: 1/2/1/-1;
+  padding: 10px;
+  margin: 20px;
+}
+
+#main .lugares .seccion1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.5rem;
+}
+
+#main .lugares .seccion1 h2 {
+  color: #002930;
+}
+
+#main .lugares .seccion1 a {
+  font-size: 1.2rem;
+}
+
+#main .lugares .seccion1 a:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+#main .lugares .seccion2 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  gap: 10px;
+  margin: 10px;
+  padding: 10px;
+}
+
+#main .lugares .seccion2 div {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  gap: 15px;
+  margin: 15px;
+  padding: 15px;
+  font-size: 1.2rem;
+  border-radius: 10px;
+  border: 1px solid #5b102359;
+  color: #5b1023;
+}
+
+#main .lugares .seccion2 div h2 {
+  color: #002930;
+}
+
+#main .lugares .seccion2 div p {
+  color: #5b1023;
+}
+
+#main .lugares .seccion2 div img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+#main .lugares .seccion2 div:hover {
+  cursor: pointer;
+  border: 1px solid #000000;
+}
+
+#main .lugares .seccion3 {
+  padding: 10px;
+  margin: 20px 0px;
+}
+
+#main .lugares .seccion3 .titulo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.5rem;
+}
+
+#main .lugares .seccion3 .titulo h2 {
+  color: #002930;
+}
+
+#main .lugares .seccion3 .titulo a {
+  font-size: 1.2rem;
+}
+
+#main .lugares .seccion3 .titulo a:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+#main .lugares .seccion3 .departamentos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  gap: 10px;
+  margin: 10px;
+  padding: 10px;
+}
+
+#main .lugares .seccion3 .departamentos div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 300px;
+  padding: 10px;
+  margin: 10px;
+  gap: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+#main .lugares .seccion3 .departamentos div p {
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 2rem;
+  color: #f8f0af;
+  background-color: #00293099;
+  opacity: 0;
+}
+
+main .lugares .seccion3 .departamentos div:hover p {
+  animation: aparecer 1s forwards;
+}
+
+#main .lugares .seccion3 .departamentos div:first-child {
+  background: url(../img/imagen10.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#main .lugares .seccion3 .departamentos div:nth-child(2) {
+  background: url(../img/imagen11.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#main .lugares .seccion3 .departamentos div:last-child {
+  background: url(../img/imagen12.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Footer */
+#footer {
+  text-align: center;
+  font-size: 1.2rem;
+  padding: 25px;
+  border-top: #f8f0af;
+  color: #f8f0af;
+  background-color: #002930;
+}
+
+#footer p {
+  margin-bottom: 5px;
+}
+
+#footer p a {
+  color: #f8f0af;
+  text-decoration: underline;
+}
+
+#footer .redes-copy {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 1.2rem;
+}
+
+#footer .redes-copy .redes {
+  display: flex;
+  gap: 10px;
+  margin: 10px;
+}
+
+#footer .redes-copy .redes a {
+  color: #f8f0af;
+}
+
+#footer .redes-copy .redes i:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+/* Animaciones */
+@keyframes aparecer {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+  /* Header */
+  #header {
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #header .nav {
+    text-align: center;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  #header .nav nav ul li .norte {
+    display: none;
+    flex-direction: column;
+    width: 300px;
+    top: 200px;
+    left: 4rem;
+    padding: 0px;
+  }
+
+  #header .nav nav ul li .norte div img {
+    display: none;
+  }
+  
+  #header .nav nav ul li .norte div ul {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  #header .nav nav ul li:first-child:hover .norte {
+    display: flex;
+    animation: aparecer 1s forwards;
+  }
+
+  #header .nav nav ul li .sur {
+    display: none;
+    flex-direction: column;
+    width: 300px;
+    top: 200px;
+    left: 4rem;
+    padding: 0px;
+  }
+
+  #header .nav nav ul li .sur div img {
+    display: none;
+  }
+  
+  #header .nav nav ul li .sur div ul {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  #header .nav nav ul li:first-child:hover .sur {
+    display: flex;
+    animation: aparecer 1s forwards;
+  }
+
+  /* Main */
+  #main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #main .busqueda {
+    display: flex;
+    flex-direction: column-reverse;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+  }
+
+  #main .busqueda h2 {
+    text-align: center;
+    margin: 0px;
+  }
+
+  #main .busqueda input {
+    width: 100%;
+    margin: 5px auto;
+  }
+
+  #main .busqueda div {
+    margin: 0px;
+    padding: 0px;
+  }
+
+  #main .busqueda div ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 5px;
+    padding: 0px;
+  }
+
+  #main .busqueda div ul li {
+    padding: 0px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  #main .busqueda div:last-child {
+    display: none;
+  }
+
+  #main .lugares {
+    width: 100%;
+    margin-top: 50px;
+    padding: 5px 0px;
+    border-top: 1px solid #00293055;
+  }
+
+  #main .lugares .seccion1 {
+    display: flex;
+    align-items: center;
+  }
+
+  #main .lugares .seccion2 {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  #main .lugares .seccion3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+  }
+
+  #main .lugares .seccion3 .titulo {
+    display: flex;
+    gap: 15px;
+  }
+
+  #main .lugares .seccion3 .departamentos {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    width: 100%;
+    gap: 10px;
+    padding: 0px;
+    margin: 0px;
+  }
+
+  /* Footer */
+  #footer .redes-copy {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
